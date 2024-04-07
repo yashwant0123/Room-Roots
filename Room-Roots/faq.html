@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FAQ</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="faq.css">
+    <link rel="stylesheet" href="footer.css">
+    <script src="https://kit.fontawesome.com/6f0ede3b10.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <img src="Images/House.jpg" class="logo">
+              <ul class="nav-links">
+                      <li class="active"><a href="home1.html">Home</a></li>
+                      <li><a href="about1.html">About</a></li>
+                      <li><a href="contact1.html">Contact</a></li>
+                      <li><a href="signup1.html"><i class="fa-solid fa-user"></i></a></li>
+                      <li><a href="notification1.html"><i class="fa-solid fa-bell"></i></a></li>
+              </ul>
+              <img src="Images/menu-btn.png" alt="" class="menu-btn">
+          </nav>
+    </header>
+
+<div class="wrapper">
+    <h1>Frequently Asked Questions</h1>
+    
+<div class="faq">
+        <button class="accordion">
+            How do I search for rental properties on your website?
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+    <div class="pannel">
+        <p>To search for rental properties, simply navigate to our website's homepage and use the search bar. You can filter your search based on location, price range, number of bedrooms, and other criteria to find the perfect rental property for you.           
+        </p>
+  </div>
+</div>
+
+<div class="faq">
+    <button class="accordion">
+        Are there any fees associated with using your website to find a rental property?
+        <i class="fa-solid fa-chevron-down"></i>
+    </button>
+<div class="pannel">
+    <p>No, there are no fees for tenants to use our website. Our services are completely free for renters.</p>
+        </div>
+    </div>
+
+    <div class="faq">
+        <button class="accordion">
+            How can I contact the landlord or property manager for a rental property I'm interested in?
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+    <div class="pannel">
+        <p>
+            Each rental property listing on our website includes contact information for the landlord or property manager. You can reach out to them directly via phone or email to inquire about the property or schedule a viewing.
+        </p>
+  </div>
+</div>
+
+<div class="faq">
+    <button class="accordion">
+        What documents do I need to provide to apply for a rental property?
+        <i class="fa-solid fa-chevron-down"></i>
+    </button>
+<div class="pannel">
+    <p>The required documents may vary depending on the landlord or property management company. Generally, you will need to provide proof of income, a rental application, and possibly a credit report. Some landlords may also require references from previous landlords or employers.
+    </p> 
+    </div>
+</div>
+
+<div class="faq">
+<button class="accordion">
+    Can I schedule a viewing of a rental property through your website?
+    <i class="fa-solid fa-chevron-down"></i>
+</button>
+<div class="pannel">
+<p>While you cannot schedule viewings directly through our website, you can use the contact information provided on the rental property listing to reach out to the landlord or property manager and schedule a viewing at your convenience.</p>
+    </div>
+  </div>
+<p>FAQs should cover most common inquiries renters might have when using our house renting website. If you have any further questions or need assistance, feel free to contact our customer support team for assistance.</p>
+</div>
+
+
+
+<footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about1.html">About Us</a></li>
+                        <li><a href="#">Our Services</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Report A Problem</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="#">Phone No : +91 123456789</a></li>
+                        <li><a href="#">Email : roomroots@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.querySelector('.menu-btn')
+        const navlinks = document.querySelector('.nav-links')
+
+        menuBtn.addEventListener('click',()=>{
+            navlinks.classList.toggle('mobile-menu')
+        })
+ //
+        var acc = document.getElementsByClassName
+        ("accordion");
+        var i;
+
+        for (i = 0; i < acc.length ; i++){
+            acc[i].addEventListener("click", function(){
+                this.classList.toggle("active1");
+                this.parentElement.classList.toggle("1");
+
+                var pannel = this.nextElementSibling;
+
+                if(pannel.style.display === "block"){
+                   pannel.style.display = "none";
+                } else {
+                    pannel.style.display ="block";
+                }
+            });
+        }
+    </script> 
+</body>
+</html>    
+    
+

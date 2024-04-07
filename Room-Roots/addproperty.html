@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+        <link rel="stylesheet" href="addproperty.css">
+        <script src="https://kit.fontawesome.com/6f0ede3b10.js"></script>
+        <title>Add Property</title>
+    </head>
+    <body>
+      <div class="contact-wrapper">
+        <div class="container">
+            <input type="file" id="file" accept="Images/*" hidden>
+            <div class="img-area" data-img="hi1.jpg">
+                <i class="fa-solid fa-arrow-up-from-bracket icon"></i>
+                <h3>Upload File</h3>
+            </div>
+            <button class="Select-file">Select File</button>
+        </div>
+        <form action="connect.php" method="post">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" placeholder="" id="name" name="name">
+          </div>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" placeholder="" id="address" name="address">
+          </div>
+          <div class="contact"> 
+            <label for="contact">Contact</label>
+              <input type="phoneno" placeholder="Phone No" id="contact" name="contact">
+          </div>
+          <div class="contact">    
+              <input type="email" placeholder="E-Mail" id="contact" name="contact">
+          </div>
+          <div class="form-group">
+            <label for="about">About</label>
+            <textarea name="message" placeholder=""></textarea>
+          </div>    
+            <input type="button" value="Submit">
+        </form>
+      </div>
+    </body>
+</html>

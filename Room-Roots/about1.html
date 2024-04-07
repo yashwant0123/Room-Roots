@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="aboutusstyle.css">
+    <link rel="stylesheet" href="footer.css">
+    <script src="https://kit.fontawesome.com/6f0ede3b10.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <img src="Images/House.jpg" class="logo">
+              <ul class="nav-links">
+                      <li class="active"><a href="home1.html">Home</a></li>
+                      <li><a href="about1.html">About</a></li>
+                      <li><a href="contact1.html">Contact</a></li>
+                      <li><a href="signup1.html"><i class="fa-solid fa-user"></i></a></li>
+                      <li><a href="notification1.html"><i class="fa-solid fa-bell"></i></a></li>
+              </ul>
+              <img src="Images/menu-btn.png" alt="" class="menu-btn">
+          </nav>
+    </header>
+ 
+
+    <div class="heading">
+        <h1>About Us</h1>
+        <h2>Our company help people's to find the perfect rent house for them.</h2>
+    </div> 
+    <div class="about-us">
+        <img src="Images/Team.jpg">
+        <div class="content">
+            <h2>House Renting Company</h2>
+            <p>In an increasingly competitive rental market, finding the perfect place to call 
+                home can be a daunting task. RoomRoots is here to simplify the process for both tenants 
+                and property owners. Our platform is designed to connect users with the ideal rental 
+                property while offering property owners a streamlined way to list their rentals
+                <span id="dots">...</span>
+                <span id="invisible-text"> RoomRoots is a web-based platform that enables users to search for 
+                    apartments, rooms, houses, and other rental properties. Property owners can easily list their 
+                    properties, manage listings, and connect with potential tenants. The platform offers 
+                    advanced search and filtering options, detailed property listings, secure payment processing, 
+                    and user-friendly dashboards.
+                </span></p>
+         <button id="read-more-btn" onclick="Moreless()">Read More</button>
+       </div>
+    </div> 
+<script>
+    function Moreless(){
+        var dots=document.getElementById("dots");
+        var invisibleText=document.getElementById("invisible-text");
+        var btnText=document.getElementById("read-more-btn");
+        if(dots.style.display!="none"){
+            dots.style.display="none";
+            invisibleText.style.display="inline";
+            btnText.innerHTML="Read Less";
+        }
+        else{dots.style.display="inline";
+            invisibleText.style.display="none";
+            btnText.innerHTML="Read More"
+        }
+    }
+</script>      
+
+    <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Services</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Feedback</a></li>
+                            <li><a href="#">Report A Problem</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact Us</h4>
+                        <ul>
+                            <li><a href="#">Phone No : +91 123456789</a></li>
+                            <li><a href="#">Email : roomroots@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Get Help</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            const menuBtn = document.querySelector('.menu-btn')
+            const navlinks = document.querySelector('.nav-links')
+    
+            menuBtn.addEventListener('click',()=>{
+                navlinks.classList.toggle('mobile-menu')
+            })
+        </script> 
+</body>
+</html>

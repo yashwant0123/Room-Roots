@@ -1,0 +1,132 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poperty</title>
+    <link rel="stylesheet" type="text/css" href="mainpage.css">
+</head>
+<body>
+    <div class="container">
+       <div class="Search-box">
+        <input type="text" placeholder="Location">
+        <button type="submit" class="btn">Search</button>
+       </div>
+    </div>
+
+    <div class="card-container">
+    <div class="card" data-name="Delhi">
+        <img src="Images/hi1.jpeg">
+        <div class="card-content">
+            <h4>Name - A</h4>  
+            <h4>Address - Delhi</h4>
+            <h4>Contact -</h4> 
+            <h4>About -</h4>
+        <p><h5>Hello Im A</h5></p> 
+        <a href="" class="btn">Read More</a>   
+        </div>
+    </div>
+    <div class="card">
+        <img src="Images/hi2.jpeg">
+        <div class="card-content" data-name="Indore">
+            <h4>Name - B</h4>  
+            <h4>Address - Indore</h4>
+            <h4>Contact -</h4> 
+            <h4>About -</h4>
+        <p><h5>Hello Im B</h5></p> 
+        <a href="" class="btn">Read More</a>   
+        </div>
+    </div>
+    <div class="card">
+        <img src="Images/hi3.jpeg">
+        <div class="card-content" data-name="Nagpur">
+            <h4>Name - C</h4>  
+            <h4>Address - Nagpur</h4>
+            <h4>Contact -</h4> 
+            <h4>About -</h4>
+        <p><h5>Hello Im C</h5></p> 
+        <a href="" class="btn">Read More</a>   
+        </div>
+    </div>
+    <div class="card">
+        <img src="Images/hi4.jpeg">
+        <div class="card-content" data-name="Banglore">
+            <h4>Name - D</h4>  
+            <h4>Address - Banglore</h4>
+            <h4>Contact -</h4> 
+            <h4>About -</h4>
+        <p><h5>Hello Im D</h5></p> 
+        <a href="" class="btn">Read More</a>   
+        </div>
+    </div>
+    <div class="card">
+        <img src="Images/hi5.jpeg">
+        <div class="card-content" data-name="Pune">
+            <h4>Name - E</h4>  
+            <h4>Address - Pune</h4>
+            <h4>Contact -</h4> 
+            <h4>About -</h4>
+        <p><h5>Hello Im E</h5></p> 
+        <a href="" class="btn">Read More</a>   
+        </div>
+    </div>
+    <div class="card">
+        <img src="Images/hi6.jpeg">
+        <div class="card-content" data-name="Noida">
+            <h4>Name - F</h4>  
+            <h4>Address - Noida</h4>
+            <h4>Contact -</h4> 
+            <h4>About -</h4>
+        <p><h5>Hello Im F</h5></p> 
+        <a href="" class="btn">Read More</a>   
+        </div>
+    </div>
+    <div class="card">
+        <img src="Images/hi7.jpeg">
+        <div class="card-content" data-name="Gujrat">
+            <h4>Name - G</h4>  
+            <h4>Address - Gujrat</h4>
+            <h4>Contact -</h4> 
+            <h4>About -</h4>
+        <p><h5>Hello Im G</h5></p> 
+        <a href="" class="btn">Read More</a>   
+        </div>
+    </div>
+    <div class="card">
+        <img src="Images/hi8.jpeg">
+        <div class="card-content" data-name="Haryana">
+        <h4>Name - H</h4>  
+        <h4>Address - Haryana</h4>
+        <h4>Contact -</h4> 
+        <h4>About -</h4>
+        <p><h5>Hello Im H</h5></p> 
+        <a href="" class="btn">Read More</a>   
+        </div>
+    </div>
+    
+    <script>
+        const search = document.querySelector(".search-box input"),
+                card = document.querySelectorAll(".card");
+              
+        search.addEventListener("keyup", e =>{
+            if(e.key == "Enter"){
+                let searcValue = search.value,
+                value = searcValue.toLowerCase();
+                Card.forEach(Card =>{
+                    if(value === card.dataset.name){
+                        return card.style.display = "block";
+                    }
+                    card.style.display = "none";
+                });
+            }
+        });
+        search.addEventListener("keyup", () =>{
+            if(search.value != "")return;
+
+            card.forEach(card =>{
+                card.style.display = "block";
+            })
+        })
+    </script>    
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta data-name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="search.css">
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
+        <title>Search</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="search-box">
+                <i class="bx bx-search"></i>
+                <input type="text" placeholder="Search">
+            </div>
+
+            <div class="Images">
+                <div class="image-box" data-name="House">
+                    <img src="Images/hi1.jpeg" alt="">
+                    <h6>House</h6>
+                </div>
+                <div class="image-box" data-name="Flat">
+                    <img src="Images/hi2.jpeg" alt="">
+                    <h6>Flat</h6>
+                </div>
+                <div class="image-box" data-name="House">
+                    <img src="Images/hi3.jpeg" alt="">
+                    <h6>House</h6>
+                </div>
+                <div class="image-box" data-name="Flat">
+                    <img src="Images/hi4.jpeg" alt="">
+                    <h6>Flat</h6>
+                </div>
+                <div class="image-box" data-name="House">
+                    <img src="Images/hi5.jpeg" alt="">
+                    <h6>House</h6>
+                </div>
+                <div class="image-box" data-name="Flat">
+                    <img src="Images/hi6.jpeg" alt="">
+                    <h6>Flat</h6>
+                </div>
+                <div class="image-box" data-name="House">
+                    <img src="Images/hi7.jpeg" alt="">
+                    <h6>House</h6>
+                </div>
+                <div class="image-box" data-name="Flat">
+                    <img src="Images/hi8.jpeg" alt="">
+                    <h6>Flat</h6>
+                </div>
+                <div class="image-box" data-name="House">
+                    <img src="Images/hi9.jpeg" alt="">
+                    <h6>House</h6>
+                </div>
+            </div>
+        </div> 
+
+        <script>
+            const search = document.querySelector(".search-box input"),
+                  Images = document.querySelectorAll(".image-box");
+                  
+            search.addEventListener("keyup", e =>{
+                if(e.key == "Enter"){
+                    let searcValue = search.value,
+                    value = searcValue.toLowerCase();
+                    Images.forEach(image =>{
+                        if(value === image.dataset.name){
+                            return image.style.display = "block";
+                        }
+                        image.style.display = "none";
+                    });
+                }
+            });
+            search.addEventListener("keyup", () =>{
+                if(search.value != "") return;
+    
+             Images.forEach(image =>{
+                    image.style.display = "block";
+                })
+            })
+        </script>   
+    </body>
+</html>

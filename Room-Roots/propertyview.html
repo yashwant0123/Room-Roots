@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+        <link rel="stylesheet" href="propertyview.css">
+        <script src="https://kit.fontawesome.com/6f0ede3b10.js"></script>
+        <title>Property</title>
+    </head>
+    <body>
+        <div class="container">
+          <div class="slides">
+            <img src="Images/hi1.jpeg" class="active">
+            <img src="Images/hi2.jpeg">
+            <img src="Images/hi3.jpeg">
+            <img src="Images/hi4.jpeg">
+          </div>
+          <div class="button">
+            <span class="next">&#10095;</span>
+            <span class="prev">&#10094;</span>
+          </div>
+        </div>     
+      <div class="box">
+        <div class="about">
+          <h2>OWNER</h2>
+          <img src="Images/1.png" alt="">
+         </div>
+        <div class="data">
+          <td>Name -</td>
+          <td>Jack</td>
+        <br>
+        <br>
+          <td>Address -</td>
+          <td>Hno. 1234 , Madhya Pradesh</td>
+        <br>
+        <br>
+          <h3>Contact -</h3>
+        <br>  
+          <td>Phone No :</td>
+          <td>+91 123456789</td>
+        <br>
+        <br>
+          <td>E-mail :</td>
+          <td>abcd@gmail.com</td>
+        <br>
+        <br>      
+          <h3>Details -</h3>
+        <br>
+           <p>City Skyline Views: Charming, naturally well-lit 3 bedroom 2 bathroom apartment. In Old Town neighborhood. Close to the red line, shops and nightlife on Wells Street, and walking distance to the Whole Foods.
+             <span id="invisible-text"> 
+              <span id="dots"></span> Balcony for fresh air , hardwood flooring throughout. Pet-friendly. 1500/month, 1 month security deposit. Utilities not included.
+             </span></p>
+        <button id="read-more-btn" onclick="Moreless()">Read More</button> 
+        <br>
+        <br>  
+          <h3>Location -</h3>        
+        </div>
+        <div class="maps"> 
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.119493404619!2d79.88127751513542!3d23.20231548102195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3981b19636ef2cb3%3A0x91fcce8457ae874b!2sGlobal%20institute%20college!5e0!3m2!1sen!2sin!4v1705673301552!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+<script>let slideImages = document.querySelectorAll('img');
+
+        let next = document.querySelector('.next');
+        let prev = document.querySelector('.prev');
+        
+        var counter = 0;
+        
+        next.addEventListener('click', slideNext);
+        function slideNext(){
+        slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
+        if(counter >= slideImages.length-1){
+            counter = 0;
+        }
+        else{
+            counter++;
+        }
+        slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';    
+        }
+        
+        prev.addEventListener('click', slidePrev);
+        function slidePrev(){
+        slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
+        if(counter == 0){
+            counter = slideImages.length-1;
+        }
+        else{
+            counter--;
+        }
+        slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';    
+        }
+        
+        function Moreless(){
+            var dots=document.getElementById("dots");
+            var invisibleText=document.getElementById("invisible-text");
+            var btnText=document.getElementById("read-more-btn");
+            if(dots.style.display!="none"){
+                dots.style.display="none";
+                invisibleText.style.display="inline";
+                btnText.innerHTML="Read Less";
+            }
+            else{dots.style.display="inline";
+                invisibleText.style.display="none";
+                btnText.innerHTML="Read More"
+            }
+        }
+</script>
+    </body>
+</html>
